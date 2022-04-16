@@ -13,7 +13,7 @@
 ### Optimization Techniques - preventing unnecessary rent in Parent and Child component
 Optimization techniques can be done either through Same Element Reference or React Memoized
 > Same Element Reference
-* Invoke the child component as a child element under the parent component in App.js. <Parent><ChildOne /></Parent>
+* Invoke the child component as a child element under the parent component in App.js. [Parent][ChildOne /][/Parent]... (NB: [] was used to let Github display the componentname. So, replace [] with <>)
 * Pass the child component as a props to the parent. ({children})
 * Render the {children} props in the Parent component JSX
 
@@ -23,4 +23,4 @@ Things to know about Same Element Reference
 
 > React memo
 * In the ChildOneComponent, create additional export to re-export the component using React.memo(). For instance, export default memoizedComponent = React.memo(ChildOneComponent)
-* Import <memoizedComponent/> in the parent component
+* Import [memoizedComponent /] in the parent component. (NB: [] was used to let Github display the componentname. So, replace [] with <>)
