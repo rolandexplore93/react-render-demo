@@ -8,6 +8,7 @@ import ParentOne from './Components/Optimization/ParentOne';
 import { ChildOne } from './Components/Optimization/ChildOne';
 import ParentTwo from './Components/Optimization/ParentTwo';
 import ParentThree from './Components/IncorrectOptimizations/ParentThree';
+import ParentFour from './Components/IncorrectOptimizations/ParentFour';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <ChildOne />
       </ParentOne> */}
       {/* <ParentTwo /> */}
-      <ParentThree />
+      {/* <ParentThree /> */}
+      <ParentFour />
     </div>
   );
 }
