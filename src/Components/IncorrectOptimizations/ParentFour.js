@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 import { MemoizedChildFive } from './ChildFive'
 // import { MemoizedChildFour } from './ChildFour'
 // import { MemoizedChildThree } from './ChildThree'
@@ -14,8 +14,15 @@ function ParentFour() {
         lname: "Ogundipe"
     }
 
+    // useMemo() solves the problem of incorrect memo with {} props reference
+    // import useMemo() and wrap the person objectinside
+    const memoizedPerson = useMemo(() => person, [])
+
     // a click handler function also have the same behavior
     const handleClick =  () => {}
+    // useCallback() solves the problem of incorrect memo with ()=>{} props reference
+    // import useCallback() and wrap the handleclick function inside
+    const memoizedHandleClick = useCallback(handleClick, [])
 
     console.log("ParentFour Render")
     
@@ -29,7 +36,8 @@ function ParentFour() {
             Hello
         </MemoizedChildThree> */}
         {/* <MemoizedChildFour name={name} /> */}
-        <MemoizedChildFive name={name} person={person} />
+        <MemoizedChildFive name={name} person={memoizedPerson} />
+        {/* <MemoizedChildFive name={name} handleClick={memoizedHandleClick} /> */}
     </div>
   )
 }

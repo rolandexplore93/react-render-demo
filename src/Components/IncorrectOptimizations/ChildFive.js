@@ -7,6 +7,9 @@ export const ChildFive = ({name, person}) => {
   return (
     <div>
         Hello {name} {person.fname} {person.lname}
+        {/* clickHandler Testing */}
+        {/* Hello {name} */}
+
     </div>
   )
 }
