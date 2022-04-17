@@ -7,6 +7,7 @@ import { ArrayUseState } from './Components/ImmutableState/ArrayUseState';
 import ParentOne from './Components/Optimization/ParentOne';
 import { ChildOne } from './Components/Optimization/ChildOne';
 import ParentTwo from './Components/Optimization/ParentTwo';
+import ParentThree from './Components/IncorrectOptimizations/ParentThree';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       {/* <ParentOne>
         <ChildOne />
       </ParentOne> */}
-      <ParentTwo />
+      {/* <ParentTwo /> */}
+      <ParentThree />
     </div>
   );
 }
